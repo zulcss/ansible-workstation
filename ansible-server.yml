@@ -1,0 +1,10 @@
+---
+
+- name: Ubuntu workstation playbook
+  hosts: localhost
+  roles:
+     - packages
+     - docker
+     - dotfiles
+     - java
+     - pip
