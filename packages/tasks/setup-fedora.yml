@@ -1,0 +1,44 @@
+---
+
+- name: Install the development tools packages
+  dnf: name={{item}} state=installed
+  with_items;
+    - "@fedora-packager"
+    - "@virtualization"
+
+- name: Install the 'yum-fastestmirror' plugin
+  dnf: name=yum-fatestmirror state=latest
+
+- name: Install libselinux-python. Needed bc of SELinux and ansible
+  dnf: name=libselinux-python state=latest
+
+- name: Install python-dnf for using dnf with ansible
+  dnf: name=python-dnf state=latest
+
+- name: Install fedora-packager package
+  dnf: name=fedora-packager state=latest
+
+- name: Install the rpmdevtools package
+  dnf: name=rpmdevtools state=latest
+
+- name: Install git
+  dnf: name=git state=latest
+
+- name: Install tig, a simple git-log viewer
+  dnf: name=tig state=latest
+
+- name: Install python-virtualenv
+  dnf: name=python-virtualenv state=latest
+
+- name: Install python-pip
+  dnf: name=python-pip state=latest
+
+- name: Install mlocate package - locate and updatedb
+  dnf: name=mlocate state=latest
+
+- name: Install ansible-lint
+  dnf: name=ansible-lint state=latest
+
+- name: Install vim
+  dnf: name=vim state=latest
+

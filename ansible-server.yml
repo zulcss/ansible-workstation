@@ -3,7 +3,7 @@
   gather_facts: False
 
   tasks:
-  - name: instal python
+  - name: install python
     raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimail)
 
   - name: Ubuntu workstation playbook
