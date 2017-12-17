@@ -1,10 +1,15 @@
 ---
+- hosts: localhost
+  gather_facts: False
 
-- name: Ubuntu workstation playbook
-  hosts: localhost
-  roles:
-     - packages
-     - docker
-     - dotfiles
-     - java
-     - pip
+  tasks:
+  - name: instal python
+    raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimail)
+
+  - name: Ubuntu workstation playbook
+    roles:
+      - packages
+      - docker
+      - dotfiles
+      - java
+      - pip
