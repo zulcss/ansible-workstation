@@ -2,7 +2,7 @@
 
 - name: Install the development tools packages
   dnf: name={{item}} state=installed
-  with_items;
+  with_items:
     - "@fedora-packager"
     - "@virtualization"
 
