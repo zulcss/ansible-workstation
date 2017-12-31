@@ -42,3 +42,5 @@
 - name: Install vim
   dnf: name=vim state=latest
 
+- name: unhide
+  dnf: name=unhide state=latest

@@ -1,12 +1,12 @@
 ---
 
-- apt_repository:
-    name: ppa:longsleep/golang-backports
-    state: present 
+#- apt_repository:
+#    name: ppa:longsleep/golang-backports
+#    state: present 
 
-- apt_repository:
-    name: deb http://ppa.launchpad.net/neovim-ppa/unstable/ubuntu xenial main
-    state: present
+#- apt_repository:
+#    name: deb http://ppa.launchpad.net/neovim-ppa/unstable/ubuntu xenial main
+#    state: present
 
 - name: Install packages
   apt: pkg={{ item }} state=latest update_cache=yes
@@ -26,9 +26,10 @@
     - xz-utils
     - build-essential
     - jq
-    - neovim
+    - vim
     - bash-completion
     - rxvt-unicode-256color
     - strace
     - openvpn
     - golang
+    - unhide
